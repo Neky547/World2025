@@ -64,7 +64,7 @@
         <?php
           require_once 'inc/manager-db.php';
           $lesContinents = getContinent();
-          $lesPays = getAllCountries();
+          $desPays = getAllCountries();
         ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
@@ -75,6 +75,17 @@
             <?php endforeach ; ?>
           </div>
         </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">Pays</a>
+          <div class="dropdown-menu" aria-labelledby="dropdown02">
+            <?php foreach($desPays as $lePays) : ?>
+            <a class="dropdown-item" href="index2.php?name=<?= $lePays->id; ?>"><?= $lePays->Name; ?> </a>
+            <?php endforeach ; ?>
+          </div>
+        </li>
+
       </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
