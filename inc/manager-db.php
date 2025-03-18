@@ -65,6 +65,6 @@ function getAllCountries()
 /* Obtenir la capitale du pays*/ 
 function getCapitale($num){
     global $pdo;
-    $query = 'SELECT Name FROM City;';
+    $query = 'SELECT Capital FROM Country;';
     return $pdo->query($query)->fetchAll();
 }
