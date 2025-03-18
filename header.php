@@ -33,6 +33,10 @@
         font-size: 3.5rem;
       }
     }
+    .dropdown-menu{
+      max-height: 400px;
+      overflow-y: auto;
+    }
   </style>
   <!-- Custom styles for this template -->
   <link href="css/custom.css" rel="stylesheet">
@@ -57,16 +61,18 @@
         <li class="nav-item">
           <a class="nav-link disabled" href="#">Disabled</a>
         </li>
+        <?php
+          require_once 'inc/manager-db.php';
+          $lesContinents = getContinent();
+          $lesPays = getAllCountries();
+        ?>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
              aria-expanded="false">Continent</a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="index2.php?name=Europe">Europe</a>
-            <a class="dropdown-item" href="index2.php?name=Asia">Asie</a>
-            <a class="dropdown-item" href="index2.php?name=Africa">Afrique</a>
-
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <?php foreach($lesContinents as $leContinent) : ?>
+            <a class="dropdown-item" href="index2.php?name=<?= $leContinent->continent ; ?>"><?= $leContinent->continent; ?> </a>
+            <?php endforeach ; ?>
           </div>
         </li>
       </ul>

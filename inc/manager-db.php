@@ -61,8 +61,15 @@ function getAllCountries()
     return $pdo->query($query)->fetchAll();
 }
 
+// Obtenir tous les continents
+function getContinent()
+{
+    global $pdo;
+    $query = 'SELECT DISTINCT continent FROM Country;';
+    return $pdo->query($query)->fetchAll();
+}
 
-/* Obtenir la capitale du pays*/ 
+/* Obtenir la capitale du pays */
 function getCapitale($num){
     global $pdo;
     $query = 'SELECT Capital FROM Country;';

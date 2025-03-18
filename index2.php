@@ -13,11 +13,16 @@
  */
 
 ?>
-<?php  require_once 'header.php'; ?>
 <?php
 require_once 'inc/manager-db.php';
-$continent = $_GET['name'];
+if (isset($_GET['name']) && !empty($_GET['name']) ){
+$continent = ($_GET['name']);
 $desPays = getCountriesByContinent($continent);
+}
+else{
+$continent = "Monde";
+$desPays = getAllCountries();
+}
 ?>
 
 <main role="main" class="flex-shrink-0">
