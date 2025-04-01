@@ -40,7 +40,7 @@
            <th>Surface</th>
            <th>Chef état</th>
            <th>Capitale</th>
-           <th>Drapeau</th>
+           
 
          </tr>
        <?php

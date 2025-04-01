@@ -81,7 +81,7 @@
               aria-expanded="false">Pays</a>
           <div class="dropdown-menu" aria-labelledby="dropdown02">
             <?php foreach($desPays as $lePays) : ?>
-            <a class="dropdown-item" href="index2.php?name=<?= $lePays->id; ?>"><?= $lePays->Name; ?> </a>
+            <a class="dropdown-item" href="detailsPays.php?name=<?= $lePays->id; ?>"><?= $lePays->Name; ?> </a>
             <?php endforeach ; ?>
           </div>
         </li>

@@ -80,8 +80,34 @@ function getCapitale($num){
     return $prep->fetch();
 } 
 
-/* Obtenir le drapeau*/
+/* Obtenir le drapeau
 function getflag(){
     global $pdo;
     
+}*/
+
+/* Obtenir le code de chaque pays */
+function getInfo($id){
+    global $pdo;
+    $query = 'SELECT * FROM Country WHERE id = :id;';
+    $prep = $pdo->prepare($query);
+    $prep->bindValue('id', $id, PDO::PARAM_STR);
+    $prep->execute();
+    return $prep->fetch();
+}
+
+/* Obtenir le drapeau 
+function getFlag($lePays){
+    global $pdo;
+
+}*/
+
+/* */
+function getPaysByName($name){
+    global $pdo;
+    $query = 'SELECT * FROM Country WHERE nom = :nom;';
+    $prep = $pdo->prepare($query);
+    $prep->bindValue('name', $id, PDO::PARAM_STR);
+    $prep->execute();
+    return $prep->fetch();
 }
