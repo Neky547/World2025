@@ -72,6 +72,16 @@ function getContinent()
 /* Obtenir la capitale du pays */
 function getCapitale($num){
     global $pdo;
-    $query = 'SELECT Capital,id FROM Country,City;';
-    return $pdo->fetchAll();
+    $query = 'SELECT Name 
+    FROM City WHERE id = :num;';
+    $prep = $pdo->prepare($query);
+    $prep->bindValue(':num', $num, PDO::PARAM_INT);
+    $prep->execute();
+    return $prep->fetch();
 } 
+
+/* Obtenir le drapeau*/
+function getflag(){
+    global $pdo;
+    
+}

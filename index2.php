@@ -39,6 +39,8 @@
            <th>Population</th>
            <th>Surface</th>
            <th>Chef état</th>
+           <th>Capitale</th>
+           <th>Drapeau</th>
 
          </tr>
        <?php
@@ -50,6 +52,7 @@
             <td> <?php echo $lePays->Population ?></td>
             <td> <?php echo $lePays->SurfaceArea ?></td>
             <td> <?php echo $lePays->HeadOfState ?></td>
+            <td> <?php echo getCapitale($lePays->Capital)->Name ?></td>
           </tr>
         <?php endforeach; ?>
      </table>
