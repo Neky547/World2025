@@ -7,7 +7,6 @@
   $lePays = getInfo($id); 
   
   }
-  
 ?>
 
 <main role="main" class="flex-shrink-0">
@@ -36,3 +35,7 @@
      </table>
     </div>
     
+    <?php
+require_once 'javascripts.php';
+require_once 'footer.php';
+?>
