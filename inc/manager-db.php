@@ -83,7 +83,7 @@ function getCapitale($num){
 /* Obtenir le drapeau
 function getflag(){
     global $pdo;
-    
+
 }*/
 
 /* Obtenir le code de chaque pays */
