@@ -8,12 +8,16 @@
   
   }
 ?>
-
-<main role="main" class="flex-shrink-0">
-
-<h1><?php echo $lePays->Name ?></h1>  
-<img src="images/flag/<?php echo strtolower($lePays->Code2)?>.png" alt="<?php echo $lePays->Code2 ?>">
 <div class="container">
+<main role="main" class="flex-shrink-0">
+<table>
+    <tr>
+    <td><h1><?php echo $lePays->Name ?></h1></td>  
+    <td><img src="images/flag/<?php echo strtolower($lePays->Code2)?>.png" alt="<?php echo $lePays->Code2 ?>"></td>
+    </tr>
+</table>
+
+
     <table class = "table">
         <tr>
             <br>

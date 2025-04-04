@@ -48,7 +48,7 @@
        // des caractéristiques d'un pays (en relation avec les colonnes de la table Country)
           foreach ($desPays as $lePays ) : ?>
           <tr>
-            <td> <?php echo $lePays->Name ?></td>
+            <td><a href="detailsPays.php?name=<?php echo $lePays->id ?>"></href><?php echo $lePays->Name ?></a></td>
             <td> <?php echo $lePays->Population ?></td>
             <td> <?php echo $lePays->SurfaceArea ?></td>
             <td> <?php echo $lePays->HeadOfState ?></td>
