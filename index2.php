@@ -52,7 +52,11 @@
             <td> <?php echo $lePays->Population ?></td>
             <td> <?php echo $lePays->SurfaceArea ?></td>
             <td> <?php echo $lePays->HeadOfState ?></td>
-            <td> <?php echo getCapitale($lePays->Capital)->Name ?></td>
+            <?php if (!empty(getCapitale($lePays->Capital))):?>
+              <td> <?php echo getCapitale($lePays->Capital)->Name ?></td>
+            <?php else:?>
+              <td><i> <?php echo "Ce pays n'a pas de capitale"?></i>
+            <?php endif ?>
           </tr>
         <?php endforeach; ?>
      </table>
